@@ -6,6 +6,12 @@ class Back_pack:
     def addToBackpack(self, item):
         self.item.append(item)
 
+    def remove_from_backpack(self,item):
+        if item in self.item:
+            self.item.remove(item)
+        else:
+            print(f"{item} not found in backpack.")    
+
     def __str__(self):
         return f"{self.name} backpack contains: {','.join(self.item)}"
 
